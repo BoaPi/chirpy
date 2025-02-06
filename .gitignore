@@ -3,3 +3,6 @@ chirpy
 
 # OS
 .DS_Store
+
+# project
+.env
