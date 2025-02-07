@@ -3,7 +3,6 @@ package main
 import (
 	"net/http"
 	"slices"
-	"strings"
 
 	"github.com/BoaPi/chirpy/internal/database"
 	"github.com/google/uuid"
