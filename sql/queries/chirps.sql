@@ -9,10 +9,15 @@ VALUES (
 )
 RETURNING *;
 
--- name: GetAllChirps :many
+-- name: GetChirps :many
 SELECT * FROM chirps
+WHERE (user_id = $1 OR $1 = '00000000-0000-0000-0000-000000000000')
 ORDER BY created_at ASC;
 
 -- name: GetChirpById :one
 SELECT * FROM chirps
+WHERE id = $1;
+
+-- name: DeleteChirpById :exec
+DELETE FROM chirps
 WHERE id = $1;
